@@ -1,0 +1,269 @@
+/* Profile Section */
+.profile-section {
+    padding: 80px 20px;
+    min-height: calc(100vh - 200px);
+    background-color: var(--light-bg);
+}
+
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+}
+
+/* Sidebar */
+.profile-sidebar {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--light-bg);
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.user-info h3 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.user-info p {
+    margin: 5px 0;
+    color: var(--text-color);
+}
+
+.profile-menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.profile-menu li {
+    margin-bottom: 10px;
+}
+
+.profile-menu a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.profile-menu a i {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.profile-menu a:hover,
+.profile-menu a.active {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.profile-menu .logout {
+    color: var(--accent-color);
+}
+
+.profile-menu .logout:hover {
+    background: var(--accent-color);
+    color: var(--white);
+}
+
+/* Main Content */
+.profile-content {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.content-section h2 {
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+/* Profile Form */
+.profile-form,
+.settings-form {
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.submit-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: var(--secondary-color);
+}
+
+/* Booking History */
+.booking-history {
+    display: grid;
+    gap: 20px;
+}
+
+.booking-card {
+    background: var(--light-bg);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.booking-info h3 {
+    margin: 0 0 10px 0;
+    color: var(--primary-color);
+}
+
+.booking-info p {
+    margin: 5px 0;
+    color: var(--text-color);
+}
+
+.booking-info i {
+    width: 20px;
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.booking-status {
+    text-align: right;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.status.completed {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status.upcoming {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.view-ticket {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.view-ticket:hover {
+    background: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-sidebar {
+        margin-bottom: 20px;
+    }
+
+    .booking-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .booking-status {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-section.active {
+    animation: fadeIn 0.5s ease forwards;
+}

@@ -1,0 +1,478 @@
+/* Booking Section */
+.booking-section {
+    padding: 100px 1rem 3rem;
+    min-height: 100vh;
+    background: var(--light-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Booking Steps */
+.booking-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.booking-steps::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ddd;
+    z-index: 1;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    background: var(--light-bg);
+    padding: 0 1rem;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ddd;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.step.active .step-number {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.step-text {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.step.active .step-text {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Booking Content */
+.booking-content {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-step {
+    display: none;
+}
+
+.booking-step.active {
+    display: block;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.booking-step h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Movie Selection */
+.movie-selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.movie-card {
+    background: var(--light-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.movie-info {
+    padding: 1.5rem;
+}
+
+.movie-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.movie-info p {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.select-movie {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.select-movie:hover {
+    background: var(--secondary-color);
+}
+
+.select-movie.active {
+    background: var(--secondary-color);
+}
+
+/* Showtime Selection */
+.showtime-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.date-selection {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 0.5rem;
+}
+
+.date-card {
+    background: var(--light-bg);
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.date-card:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.date-card.active {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.time-selection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.showtime-btn {
+    padding: 0.8rem 1.5rem;
+    background: var(--light-bg);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.showtime-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.showtime-btn.active {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+/* Seat Selection */
+.seat-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.screen {
+    background: #ddd;
+    height: 70px;
+    width: 100%;
+    margin-bottom: 2rem;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+.seat-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.seat-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.seat {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.seat:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.seat.selected {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.seat.occupied {
+    background: #ddd;
+    cursor: not-allowed;
+}
+
+.seat-legend {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.seat-sample {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+}
+
+.seat-sample.available {
+    background: var(--light-bg);
+}
+
+.seat-sample.selected {
+    background: var(--primary-color);
+}
+
+.seat-sample.occupied {
+    background: #ddd;
+}
+
+/* Booking Summary */
+.booking-summary {
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.summary-item .label {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* Payment Form */
+.payment-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.confirm-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.confirm-btn:hover {
+    background: var(--secondary-color);
+}
+
+/* Navigation Buttons */
+.booking-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.nav-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.nav-btn.prev {
+    background: var(--light-bg);
+    color: var(--text-color);
+}
+
+.nav-btn.next,
+.nav-btn.confirm {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.nav-btn.prev:hover:not(:disabled) {
+    background: #ddd;
+}
+
+.nav-btn.next:hover:not(:disabled),
+.nav-btn.confirm:hover:not(:disabled) {
+    background: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .booking-steps {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .booking-steps::before {
+        display: none;
+    }
+
+    .step {
+        width: 100%;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 0.5rem;
+        background: var(--white);
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .step-number {
+        margin-bottom: 0;
+    }
+
+    .movie-selection {
+        grid-template-columns: 1fr;
+    }
+
+    .date-selection {
+        flex-wrap: nowrap;
+        padding-bottom: 0.5rem;
+    }
+
+    .date-card {
+        min-width: 100px;
+    }
+
+    .seat-grid {
+        transform: scale(0.8);
+    }
+
+    .booking-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-btn {
+        width: 100%;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

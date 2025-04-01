@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt vé - MovieTicket</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>MovieTicket</h1>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="index.html#movies">Phim đang chiếu</a></li>
+                <li><a href="index.html#schedule">Lịch chiếu</a></li>
+            </ul>
+            <div class="user-menu">
+                <img src="https://via.placeholder.com/40" alt="Avatar" class="avatar">
+                <div class="dropdown-menu">
+                    <a href="profile.html">Thông tin cá nhân</a>
+                    <a href="profile.html#history">Lịch sử đặt vé</a>
+                    <a href="login.html" class="logout">Đăng xuất</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <!-- Booking Steps -->
+            <div class="booking-steps">
+                <div class="step active">
+                    <span class="step-number">1</span>
+                    <span class="step-text">Chọn phim</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <span class="step-text">Chọn suất</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <span class="step-text">Chọn ghế</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">4</span>
+                    <span class="step-text">Xác nhận</span>
+                </div>
+            </div>
+
+            <!-- Booking Content -->
+            <div class="booking-content">
+                <!-- Step 1: Movie Selection -->
+                <div id="step1" class="booking-step active">
+                    <h2>Chọn phim</h2>
+                    <div class="movie-selection">
+                        <div class="movie-card">
+                            <img src="https://via.placeholder.com/300x450" alt="Avengers: Endgame">
+                            <div class="movie-info">
+                                <h3>Avengers: Endgame</h3>
+                                <p>Thời lượng: 3h 1p</p>
+                                <p>Thể loại: Hành động, Phiêu lưu</p>
+                                <button class="select-movie">Chọn phim này</button>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="https://via.placeholder.com/300x450" alt="Spider-Man: No Way Home">
+                            <div class="movie-info">
+                                <h3>Spider-Man: No Way Home</h3>
+                                <p>Thời lượng: 2h 28p</p>
+                                <p>Thể loại: Hành động, Phiêu lưu</p>
+                                <button class="select-movie">Chọn phim này</button>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="https://via.placeholder.com/300x450" alt="Black Panther: Wakanda Forever">
+                            <div class="movie-info">
+                                <h3>Black Panther: Wakanda Forever</h3>
+                                <p>Thời lượng: 2h 41p</p>
+                                <p>Thể loại: Hành động, Phiêu lưu</p>
+                                <button class="select-movie">Chọn phim này</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Showtime Selection -->
+                <div id="step2" class="booking-step">
+                    <h2>Chọn ngày và suất chiếu</h2>
+                    <div class="showtime-selection">
+                        <div class="date-selection">
+                            <div class="date-card">
+                                <div class="date">15/03</div>
+                                <div class="day">Thứ 6</div>
+                            </div>
+                            <div class="date-card">
+                                <div class="date">16/03</div>
+                                <div class="day">Thứ 7</div>
+                            </div>
+                            <div class="date-card">
+                                <div class="date">17/03</div>
+                                <div class="day">Chủ nhật</div>
+                            </div>
+                        </div>
+                        <div class="time-selection">
+                            <button class="showtime-btn">10:00</button>
+                            <button class="showtime-btn">13:00</button>
+                            <button class="showtime-btn">16:00</button>
+                            <button class="showtime-btn">19:00</button>
+                            <button class="showtime-btn">22:00</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Seat Selection -->
+                <div id="step3" class="booking-step">
+                    <h2>Chọn ghế</h2>
+                    <div class="seat-selection">
+                        <div class="screen">Màn hình</div>
+                        <div class="seat-grid">
+                            <div class="seat-row">
+                                <div class="seat" data-seat="A1">A1</div>
+                                <div class="seat" data-seat="A2">A2</div>
+                                <div class="seat" data-seat="A3">A3</div>
+                                <div class="seat" data-seat="A4">A4</div>
+                                <div class="seat" data-seat="A5">A5</div>
+                                <div class="seat" data-seat="A6">A6</div>
+                                <div class="seat" data-seat="A7">A7</div>
+                                <div class="seat" data-seat="A8">A8</div>
+                            </div>
+                            <div class="seat-row">
+                                <div class="seat" data-seat="B1">B1</div>
+                                <div class="seat" data-seat="B2">B2</div>
+                                <div class="seat" data-seat="B3">B3</div>
+                                <div class="seat" data-seat="B4">B4</div>
+                                <div class="seat" data-seat="B5">B5</div>
+                                <div class="seat" data-seat="B6">B6</div>
+                                <div class="seat" data-seat="B7">B7</div>
+                                <div class="seat" data-seat="B8">B8</div>
+                            </div>
+                            <div class="seat-row">
+                                <div class="seat" data-seat="C1">C1</div>
+                                <div class="seat" data-seat="C2">C2</div>
+                                <div class="seat" data-seat="C3">C3</div>
+                                <div class="seat" data-seat="C4">C4</div>
+                                <div class="seat" data-seat="C5">C5</div>
+                                <div class="seat" data-seat="C6">C6</div>
+                                <div class="seat" data-seat="C7">C7</div>
+                                <div class="seat" data-seat="C8">C8</div>
+                            </div>
+                        </div>
+                        <div class="seat-legend">
+                            <div class="legend-item">
+                                <div class="seat-sample available"></div>
+                                <span>Trống</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="seat-sample selected"></div>
+                                <span>Đã chọn</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="seat-sample occupied"></div>
+                                <span>Đã đặt</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Confirmation -->
+                <div id="step4" class="booking-step">
+                    <h2>Xác nhận đặt vé</h2>
+                    <div class="booking-summary">
+                        <div class="summary-item">
+                            <span class="label">Phim:</span>
+                            <span id="summary-movie">Chưa chọn</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Ngày:</span>
+                            <span id="summary-date">Chưa chọn</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Suất:</span>
+                            <span id="summary-time">Chưa chọn</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Ghế:</span>
+                            <span id="summary-seats">Chưa chọn</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Tổng tiền:</span>
+                            <span id="summary-total">0đ</span>
+                        </div>
+                    </div>
+                    <form class="payment-form">
+                        <div class="form-group">
+                            <label for="payment-method">Phương thức thanh toán</label>
+                            <select id="payment-method" required>
+                                <option value="">Chọn phương thức thanh toán</option>
+                                <option value="credit">Thẻ tín dụng</option>
+                                <option value="debit">Thẻ ghi nợ</option>
+                                <option value="bank">Chuyển khoản ngân hàng</option>
+                                <option value="e-wallet">Ví điện tử</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="confirm-btn">Xác nhận đặt vé</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="booking-nav">
+                <button class="nav-btn prev" disabled>Quay lại</button>
+                <button class="nav-btn next">Tiếp tục</button>
+                <button class="nav-btn confirm" style="display: none;">Đặt vé</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Thông tin liên hệ</h3>
+                <p>Email: info@movieticket.com</p>
+                <p>Điện thoại: 0123456789</p>
+                <p>Địa chỉ: 123 Đường ABC, Quận 1, TP.HCM</p>
+            </div>
+            <div class="footer-section">
+                <h3>Theo dõi chúng tôi</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MovieTicket. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/booking.js"></script>
+</body>
+
+</html>

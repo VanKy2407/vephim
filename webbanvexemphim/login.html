@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - MovieTicket</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>MovieTicket</h1>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="index.html#movies">Phim đang chiếu</a></li>
+                <li><a href="index.html#schedule">Lịch chiếu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Auth Section -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Đăng nhập</button>
+                <button class="auth-tab" data-tab="register">Đăng ký</button>
+            </div>
+
+            <!-- Login Form -->
+            <div class="auth-form active" id="login-form">
+                <h2>Đăng nhập</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Mật khẩu</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="remember-me">
+                            Ghi nhớ đăng nhập
+                        </label>
+                        <a href="#" class="forgot-password">Quên mật khẩu?</a>
+                    </div>
+                    <button type="submit" class="submit-btn">Đăng nhập</button>
+                </form>
+            </div>
+
+            <!-- Register Form -->
+            <div class="auth-form" id="register-form">
+                <h2>Đăng ký tài khoản</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="register-name">Họ và tên</label>
+                        <input type="text" id="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-phone">Số điện thoại</label>
+                        <input type="tel" id="register-phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Mật khẩu</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm-password">Xác nhận mật khẩu</label>
+                        <input type="password" id="register-confirm-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terms" required>
+                            Tôi đồng ý với <a href="#">Điều khoản sử dụng</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="submit-btn">Đăng ký</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Thông tin liên hệ</h3>
+                <p>Email: info@movieticket.com</p>
+                <p>Điện thoại: 0123456789</p>
+                <p>Địa chỉ: 123 Đường ABC, Quận 1, TP.HCM</p>
+            </div>
+            <div class="footer-section">
+                <h3>Theo dõi chúng tôi</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MovieTicket. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+
+</html>
