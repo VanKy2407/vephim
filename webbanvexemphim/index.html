@@ -47,8 +47,33 @@
     <section id="movies" class="movies-section">
         <div class="container">
             <h2>Phim đang chiếu</h2>
+
+            <!-- Search and Filter -->
+            <div class="movie-filters">
+                <div class="search-box">
+                    <input type="text" id="movie-search" placeholder="Tìm kiếm phim...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="filter-options">
+                    <select id="genre-filter">
+                        <option value="">Tất cả thể loại</option>
+                        <option value="Hành động">Hành động</option>
+                        <option value="Phiêu lưu">Phiêu lưu</option>
+                        <option value="Tình cảm">Tình cảm</option>
+                        <option value="Hài hước">Hài hước</option>
+                        <option value="Kinh dị">Kinh dị</option>
+                    </select>
+                    <select id="duration-filter">
+                        <option value="">Tất cả thời lượng</option>
+                        <option value="short">Dưới 2h</option>
+                        <option value="medium">2h - 3h</option>
+                        <option value="long">Trên 3h</option>
+                    </select>
+                </div>
+            </div>
+
             <div class="movie-grid">
-                <div class="movie-card">
+                <div class="movie-card" data-genre="Hành động, Phiêu lưu" data-duration="long">
                     <img src="https://via.placeholder.com/300x450" alt="Avengers: Endgame">
                     <div class="movie-info">
                         <h3>Avengers: Endgame</h3>
@@ -57,7 +82,7 @@
                         <a href="booking.html" class="book-button">Đặt vé</a>
                     </div>
                 </div>
-                <div class="movie-card">
+                <div class="movie-card" data-genre="Hành động, Phiêu lưu" data-duration="medium">
                     <img src="https://via.placeholder.com/300x450" alt="Spider-Man: No Way Home">
                     <div class="movie-info">
                         <h3>Spider-Man: No Way Home</h3>
@@ -66,12 +91,39 @@
                         <a href="booking.html" class="book-button">Đặt vé</a>
                     </div>
                 </div>
-                <div class="movie-card">
+                <div class="movie-card" data-genre="Hành động, Phiêu lưu" data-duration="medium">
                     <img src="https://via.placeholder.com/300x450" alt="Black Panther: Wakanda Forever">
                     <div class="movie-info">
                         <h3>Black Panther: Wakanda Forever</h3>
                         <p>Thời lượng: 2h 41p</p>
                         <p>Thể loại: Hành động, Phiêu lưu</p>
+                        <a href="booking.html" class="book-button">Đặt vé</a>
+                    </div>
+                </div>
+                <div class="movie-card" data-genre="Tình cảm" data-duration="short">
+                    <img src="https://via.placeholder.com/300x450" alt="La La Land">
+                    <div class="movie-info">
+                        <h3>La La Land</h3>
+                        <p>Thời lượng: 1h 58p</p>
+                        <p>Thể loại: Tình cảm</p>
+                        <a href="booking.html" class="book-button">Đặt vé</a>
+                    </div>
+                </div>
+                <div class="movie-card" data-genre="Hài hước" data-duration="medium">
+                    <img src="https://via.placeholder.com/300x450" alt="Deadpool">
+                    <div class="movie-info">
+                        <h3>Deadpool</h3>
+                        <p>Thời lượng: 2h 15p</p>
+                        <p>Thể loại: Hài hước</p>
+                        <a href="booking.html" class="book-button">Đặt vé</a>
+                    </div>
+                </div>
+                <div class="movie-card" data-genre="Kinh dị" data-duration="short">
+                    <img src="https://via.placeholder.com/300x450" alt="The Conjuring">
+                    <div class="movie-info">
+                        <h3>The Conjuring</h3>
+                        <p>Thời lượng: 1h 52p</p>
+                        <p>Thể loại: Kinh dị</p>
                         <a href="booking.html" class="book-button">Đặt vé</a>
                     </div>
                 </div>

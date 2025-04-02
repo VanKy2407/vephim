@@ -4,6 +4,41 @@ document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.nav-links a');
     const movieCards = document.querySelectorAll('.movie-card');
     const showtimeButtons = document.querySelectorAll('.showtime-btn');
+    const userMenu = document.querySelector('.user-menu');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    // Lấy các phần tử lọc và tìm kiếm
+    const searchInput = document.getElementById('movie-search');
+    const genreFilter = document.getElementById('genre-filter');
+    const durationFilter = document.getElementById('duration-filter');
+
+    // Xử lý tìm kiếm và lọc phim
+    function filterMovies() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const selectedGenre = genreFilter.value;
+        const selectedDuration = durationFilter.value;
+
+        movieCards.forEach(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            const genre = card.dataset.genre;
+            const duration = card.dataset.duration;
+
+            const matchesSearch = title.includes(searchTerm);
+            const matchesGenre = !selectedGenre || genre.includes(selectedGenre);
+            const matchesDuration = !selectedDuration || duration === selectedDuration;
+
+            if (matchesSearch && matchesGenre && matchesDuration) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    // Thêm sự kiện cho tìm kiếm và lọc
+    searchInput.addEventListener('input', filterMovies);
+    genreFilter.addEventListener('change', filterMovies);
+    durationFilter.addEventListener('change', filterMovies);
 
     // Xử lý cuộn trang
     let lastScroll = 0;
@@ -91,9 +126,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Xử lý menu người dùng trên mobile
-    const userMenu = document.querySelector('.user-menu');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
-
     if (window.innerWidth <= 768) {
         userMenu.addEventListener('click', function (e) {
             e.stopPropagation();
